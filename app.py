@@ -17,7 +17,7 @@ REDIRECT_URI = "http://127.0.0.1:5000/auth/callback"
 SCOPE = ["User.Read"]
 
 # Database Configuration
-db = mysql.connector.connect(host="127.0.0.1", user="root", password="", database="mywebapp_db")
+db = mysql.connector.connect(host="crossover.proxy.rlwy.net", user="root", password="SAoyyvgSPMtVWIBlaIPnromECeoBWXUq", database="railway", port="12837")
 cursor = db.cursor(dictionary=True)
 
 # Microsoft Authentication
