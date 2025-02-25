@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Welcome, {{ user['name'] }}</h2>
+    {% if role == 'admin' %}
+        <p>You have admin access</p>
+        <a href="#">Manage Users</a>
+    {% elif role == 'user' %}
+        <p>You have limited access</p>
+        <a href="#">View Reports</a>
+    {% else %}
+        <script>alert('User is unauthorized');</script>
+    {% endif %}
+    <br>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
